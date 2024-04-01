@@ -412,6 +412,7 @@
 "Assets/PostProcessing/Runtime/Utils/MaterialFactory.cs"
 "Assets/PostProcessing/Runtime/Utils/RenderTextureFactory.cs"
 "Assets/Scripts/Camera/CameraControl.cs"
+"Assets/Scripts/Camera/ThirdPersonCamera.cs"
 "Assets/Scripts/Managers/GameManager.cs"
 "Assets/Scripts/Managers/TankManager.cs"
 "Assets/Scripts/Shell/ShellExplosion.cs"
@@ -426,7 +427,7 @@
 "Assets/_Completed-Assets/Scripts/Managers/TankManager.cs"
 "Assets/_Completed-Assets/Scripts/Shell/ShellExplosion.cs"
 "Assets/_Completed-Assets/Scripts/Tank/TankHealth.cs"
-"Assets/_Completed-Assets/Scripts/Tank/TankMovement.cs"
+"Assets/_Completed-Assets/Scripts/Tank/TankMovementComplete.cs"
 "Assets/_Completed-Assets/Scripts/Tank/TankShooting.cs"
 "Assets/_Completed-Assets/Scripts/UI/UIDirectionControl.cs"
 -langversion:9.0

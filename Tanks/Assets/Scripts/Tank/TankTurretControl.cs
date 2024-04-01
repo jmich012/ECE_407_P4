@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
@@ -38,6 +39,15 @@ public class TankTurretControl : MonoBehaviour
         {
             RotateObject(cannon, 1, Vector3.right, cannonRoatationSpeed);
         }
+
+        if (cannon.localEulerAngles.x >= 270f || cannon.localEulerAngles.x <= maxVerticalRotation)
+        {
+            isUp = true;
+        }
+        else 
+        {
+            isUp = false;
+        }
     }
 
     void RotateObject(Transform objTransform, int direction, Vector3 axis, float rotationSpeed)
@@ -45,18 +55,14 @@ public class TankTurretControl : MonoBehaviour
         // Calculate the target rotation
         Quaternion targetRotation = Quaternion.Euler(objTransform.rotation.eulerAngles + axis * direction * rotationSpeed * Time.deltaTime);
 
-        // Clamp vertical rotation if necessary
-        if (axis == Vector3.right && objTransform.localEulerAngles.x >= 0 && objTransform.localEulerAngles.x <= maxVerticalRotation)
+        objTransform.rotation = targetRotation;
+
+        if (axis == Vector3.right) 
         {
-            // Allow downwards rotation only if the angle is greater than 0 degrees
-            objTransform.rotation = Quaternion.Euler(maxVerticalRotation, objTransform.rotation.eulerAngles.y, objTransform.rotation.eulerAngles.z);
-            isUp = true;
-        }
-        else
-        {
-            // Rotate freely if not constrained
-            objTransform.rotation = targetRotation;
-            isUp = false;
+            if (direction == -1 && objTransform.rotation.x > -90.0f && objTransform.rotation.x <= -89.5f)
+            {
+                objTransform.rotation = Quaternion.Euler(-90f, objTransform.rotation.y, objTransform.rotation.z);
+            }
         }
     }
 }

@@ -69,6 +69,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Models\DitheringModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\MotionBlurModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
+    <Compile Include="Assets\_Completed-Assets\Scripts\Tank\TankMovementComplete.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\UserLutComponent.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\DitheringComponent.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
@@ -88,7 +89,6 @@
     <Compile Include="Assets\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingBehaviour.cs" />
-    <Compile Include="Assets\_Completed-Assets\Scripts\Tank\TankMovement.cs" />
     <Compile Include="Assets\Scripts\Managers\TankManager.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\ChromaticAberrationComponent.cs" />
@@ -102,6 +102,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Components\VignetteComponent.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\FxaaComponent.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
+    <Compile Include="Assets\Scripts\Camera\ThirdPersonCamera.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\TaaComponent.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Tank\TankShooting.cs" />
     <Compile Include="Assets\Scripts\Tank\TankHealth.cs" />
