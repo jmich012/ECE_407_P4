@@ -418,6 +418,7 @@
 "Assets/Scripts/Tank/TankHealth.cs"
 "Assets/Scripts/Tank/TankMovement.cs"
 "Assets/Scripts/Tank/TankShooting.cs"
+"Assets/Scripts/Tank/TankTurretControl.cs"
 "Assets/Scripts/UI/UIDirectionControl.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 "Assets/_Completed-Assets/Scripts/Camera/CameraControl.cs"

@@ -73,6 +73,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Components\DitheringComponent.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\VignetteModel.cs" />
+    <Compile Include="Assets\Scripts\Tank\TankTurretControl.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\ScreenSpaceReflectionComponent.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Managers\TankManager.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
