@@ -70,6 +70,7 @@
     <Compile Include="Assets\PostProcessing\Editor\PostProcessingInspector.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Monitors\ParadeMonitor.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Models\EyeAdaptationModelEditor.cs" />
+    <Compile Include="Assets\Forst\CTI Runtime Components\CTI Runtime Components BIRP\Scripts\Editor\CTI_AdvancedEdgeFluttering.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Models\ColorGradingModelEditor.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
     <Compile Include="Assets\PostProcessing\Editor\PostProcessingFactory.cs" />
@@ -85,16 +86,20 @@
     <Compile Include="Assets\PostProcessing\Editor\Utils\CurveEditor.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Utils\EditorResources.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Models\VignetteModelEditor.cs" />
+    <Compile Include="Assets\Forst\Conifers [BOTD]\Installer\Editor\LaunchConifersInstaller.cs" />
     <Compile Include="Assets\PostProcessing\Editor\PostProcessingMonitor.cs" />
+    <Compile Include="Assets\Forst\CTI Runtime Components\CTI Runtime Components BIRP\Scripts\Editor\CTI_ShaderGUI.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Models\DefaultPostFxModelEditor.cs" />
     <Compile Include="Assets\PostProcessing\Editor\PropertyDrawers\MinDrawer.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Models\FogModelEditor.cs" />
     <Compile Include="Assets\PostProcessing\Editor\PostProcessingBehaviourEditor.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />
+    <Compile Include="Assets\Forst\Conifers [BOTD]\Installer\Editor\ConifersInstaller.cs" />
     <Compile Include="Assets\PostProcessing\Editor\PostProcessingModelEditor.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Utils\FxStyles.cs" />
+    <Compile Include="Assets\Forst\CTI Runtime Components\CTI Runtime Components BIRP\Scripts\Editor\CTI_DetailsEnum.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Models\MotionBlurModelEditor.cs" />
   </ItemGroup>
   <ItemGroup>
