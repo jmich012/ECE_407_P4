@@ -62,10 +62,7 @@ namespace Complete
          */
         public Transform m_leftWheel;
 
-        /** 
-         * @brief The turn speed for the tank's wheels.
-         */
-        public float m_turnSpeed = 180f;
+      
 
         private string m_MovementAxisName;
         private string m_TurnAxisName;
@@ -194,7 +191,7 @@ namespace Complete
             m_leftWheel.localRotation = Quaternion.Euler(0f, wheelRotation, 0f);
             m_rightWheel.localRotation = Quaternion.Euler(0f, wheelRotation, 0f);
 
-            float turn = m_TurnInputValue * m_turnSpeed * Time.fixedDeltaTime;
+            float turn = m_TurnInputValue * m_TurnSpeed * Time.fixedDeltaTime;
             Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
 
             if (Mathf.Abs(m_MovementInputValue) > 0.0)
