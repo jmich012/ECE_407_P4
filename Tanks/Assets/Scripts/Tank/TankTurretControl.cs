@@ -1,6 +1,4 @@
-using UnityEditor;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class TankTurretControl : MonoBehaviour
 {
@@ -8,6 +6,7 @@ public class TankTurretControl : MonoBehaviour
     public float turretRotationSpeed = 50.0f;
     public float cannonRoatationSpeed = 100.0f;
     public Transform cannon;
+    public Transform FiringPosition;
 
 
     private bool isUp = false;
@@ -48,6 +47,8 @@ public class TankTurretControl : MonoBehaviour
         {
             isUp = false;
         }
+
+        FiringPosition.rotation = cannon.rotation;
     }
 
     void RotateObject(Transform objTransform, int direction, Vector3 axis, float rotationSpeed)
