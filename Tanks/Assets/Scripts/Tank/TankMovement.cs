@@ -56,13 +56,16 @@ namespace Complete
          * @brief The right wheel of the tank.
          */
         public Transform m_rightWheel;
+        public Transform m_rightBackWheel;
 
         /** 
          * @brief The left wheel of the tank.
          */
         public Transform m_leftWheel;
+        public Transform m_leftBackWheel;
 
-      
+
+
 
         private string m_MovementAxisName;
         private string m_TurnAxisName;
@@ -188,16 +191,23 @@ namespace Complete
         {
             float wheelRotation = m_TurnInputValue * m_maxWheelAngle;
             wheelRotation = Mathf.Clamp(wheelRotation, -m_maxWheelAngle, m_maxWheelAngle);
+
+            // Apply rotation to the wheels
             m_leftWheel.localRotation = Quaternion.Euler(0f, wheelRotation, 0f);
             m_rightWheel.localRotation = Quaternion.Euler(0f, wheelRotation, 0f);
+            m_leftBackWheel.localRotation = Quaternion.Euler(0f, Mathf.Clamp(wheelRotation, -2.5f, 2.5f), 0f);
+            m_rightBackWheel.localRotation = Quaternion.Euler(0f, Mathf.Clamp(wheelRotation, -2.5f, 2.5f), 0f);
 
+            // Calculate turn angle based on input
             float turn = m_TurnInputValue * m_TurnSpeed * Time.fixedDeltaTime;
             Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
 
+            // Rotate the tank body
             if (Mathf.Abs(m_MovementInputValue) > 0.0)
             {
                 m_Rigidbody.MoveRotation(m_Rigidbody.rotation * turnRotation);
             }
         }
+
     }
 }

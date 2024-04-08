@@ -47,8 +47,7 @@ public class TankTurretControl : MonoBehaviour
         {
             isUp = false;
         }
-
-        FiringPosition.rotation = cannon.rotation;
+        //FiringPosition.rotation = cannon.rotation;
     }
 
     void RotateObject(Transform objTransform, int direction, Vector3 axis, float rotationSpeed)

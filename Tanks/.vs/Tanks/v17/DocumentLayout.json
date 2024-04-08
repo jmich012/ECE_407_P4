@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\ECE_407_P4\\Tanks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C7E45AC5-E64D-261F-DF12-5BF4A531E67F}|Assembly-CSharp.csproj|d:\\ece_407_p4\\tanks\\assets\\scripts\\tank\\shooting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7E45AC5-E64D-261F-DF12-5BF4A531E67F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tank\\shooting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C7E45AC5-E64D-261F-DF12-5BF4A531E67F}|Assembly-CSharp.csproj|d:\\ece_407_p4\\tanks\\assets\\scripts\\tank\\tankmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7E45AC5-E64D-261F-DF12-5BF4A531E67F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tank\\tankmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7E45AC5-E64D-261F-DF12-5BF4A531E67F}|Assembly-CSharp.csproj|d:\\ece_407_p4\\tanks\\assets\\scripts\\tank\\tankturretcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C7E45AC5-E64D-261F-DF12-5BF4A531E67F}|Assembly-CSharp.csproj|D:\\ECE_407_P4\\Tanks\\assets\\scripts\\tank\\tankturretcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C7E45AC5-E64D-261F-DF12-5BF4A531E67F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tank\\tankturretcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7E45AC5-E64D-261F-DF12-5BF4A531E67F}|Assembly-CSharp.csproj|d:\\ece_407_p4\\tanks\\assets\\scripts\\shell\\shell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C7E45AC5-E64D-261F-DF12-5BF4A531E67F}|Assembly-CSharp.csproj|D:\\ECE_407_P4\\Tanks\\assets\\scripts\\shell\\shell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C7E45AC5-E64D-261F-DF12-5BF4A531E67F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shell\\shell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7E45AC5-E64D-261F-DF12-5BF4A531E67F}|Assembly-CSharp.csproj|D:\\ECE_407_P4\\Tanks\\assets\\_completed-assets\\scripts\\tank\\tankshooting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7E45AC5-E64D-261F-DF12-5BF4A531E67F}|Assembly-CSharp.csproj|solutionrelative:assets\\_completed-assets\\scripts\\tank\\tankshooting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C7E45AC5-E64D-261F-DF12-5BF4A531E67F}|Assembly-CSharp.csproj|d:\\ece_407_p4\\tanks\\assets\\scripts\\tank\\shooting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7E45AC5-E64D-261F-DF12-5BF4A531E67F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tank\\shooting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,9 +25,22 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 189,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 221,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TankMovement.cs",
+              "DocumentMoniker": "D:\\ECE_407_P4\\Tanks\\Assets\\Scripts\\Tank\\TankMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Tank\\TankMovement.cs",
+              "ToolTip": "D:\\ECE_407_P4\\Tanks\\Assets\\Scripts\\Tank\\TankMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Tank\\TankMovement.cs",
+              "ViewState": "AQIAAK4AAAAAAAAAAAAAwMQAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T01:16:02.105Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -36,7 +49,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Tank\\TankTurretControl.cs",
               "ToolTip": "D:\\ECE_407_P4\\Tanks\\Assets\\Scripts\\Tank\\TankTurretControl.cs",
               "RelativeToolTip": "Assets\\Scripts\\Tank\\TankTurretControl.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwDIAAAAyAAAA",
+              "ViewState": "AQIAACIAAAAAAAAAAAAgwDEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-06T22:11:22.078Z",
               "EditorCaption": ""
@@ -49,41 +62,22 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Shell\\Shell.cs",
               "ToolTip": "D:\\ECE_407_P4\\Tanks\\Assets\\Scripts\\Shell\\Shell.cs",
               "RelativeToolTip": "Assets\\Scripts\\Shell\\Shell.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAIA9wEEAAAAOAAAA",
+              "ViewState": "AQIAAAQAAAAAAAAAAADgv0EAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-06T21:55:27.694Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Shooting.cs",
               "DocumentMoniker": "D:\\ECE_407_P4\\Tanks\\Assets\\Scripts\\Tank\\Shooting.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Tank\\Shooting.cs",
               "ToolTip": "D:\\ECE_407_P4\\Tanks\\Assets\\Scripts\\Tank\\Shooting.cs",
               "RelativeToolTip": "Assets\\Scripts\\Tank\\Shooting.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAwwDgAAAA2AAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAowEsAAABkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-06T21:17:09.104Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 211,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TankShooting.cs",
-              "DocumentMoniker": "D:\\ECE_407_P4\\Tanks\\Assets\\_Completed-Assets\\Scripts\\Tank\\TankShooting.cs",
-              "RelativeDocumentMoniker": "Assets\\_Completed-Assets\\Scripts\\Tank\\TankShooting.cs",
-              "ToolTip": "D:\\ECE_407_P4\\Tanks\\Assets\\_Completed-Assets\\Scripts\\Tank\\TankShooting.cs",
-              "RelativeToolTip": "Assets\\_Completed-Assets\\Scripts\\Tank\\TankShooting.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAowAoAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-06T20:25:59.85Z",
               "EditorCaption": ""
             }
           ]
