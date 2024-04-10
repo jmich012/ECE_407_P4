@@ -176,13 +176,28 @@ namespace Complete
         }
 
         /** 
-         * @brief Moves the tank forward or backward.
+         * @brief Moves the tank forward or backward and rotates the wheels accordingly (if moving).
          */
         private void Move()
         {
-            Vector3 movement = transform.forward * m_MovementInputValue * m_Speed * Time.deltaTime;
+            // Calculate distance traveled by the tank in this frame
+            float distance = m_MovementInputValue * m_Speed * Time.deltaTime;
+
+                // Calculate wheel rotations based on distance traveled
+                float wheelRotationFront = (distance / (Mathf.PI * m_rightWheel.localScale.x)) * 180f;
+                float wheelRotationBack = (distance / (Mathf.PI * m_rightBackWheel.localScale.x)) * 180f;
+
+                // Apply rotation to the wheels
+                m_leftWheel.localRotation = Quaternion.Euler(wheelRotationFront, 0f, 0f);
+                m_rightWheel.localRotation = Quaternion.Euler(wheelRotationFront, 0f, 0f);
+                m_leftBackWheel.localRotation = Quaternion.Euler(wheelRotationBack, 0f, 0f);
+                m_rightBackWheel.localRotation = Quaternion.Euler(wheelRotationBack, 0f, 0f);
+
+            // Move the tank
+            Vector3 movement = transform.forward * distance;
             m_Rigidbody.MovePosition(m_Rigidbody.position + movement);
         }
+
 
         /** 
          * @brief Rotates the tank left or right.
@@ -192,11 +207,16 @@ namespace Complete
             float wheelRotation = m_TurnInputValue * m_maxWheelAngle;
             wheelRotation = Mathf.Clamp(wheelRotation, -m_maxWheelAngle, m_maxWheelAngle);
 
-            // Apply rotation to the wheels
-            m_leftWheel.localRotation = Quaternion.Euler(0f, wheelRotation, 0f);
-            m_rightWheel.localRotation = Quaternion.Euler(0f, wheelRotation, 0f);
-            m_leftBackWheel.localRotation = Quaternion.Euler(0f, Mathf.Clamp(wheelRotation, -2.5f, 2.5f), 0f);
-            m_rightBackWheel.localRotation = Quaternion.Euler(0f, Mathf.Clamp(wheelRotation, -2.5f, 2.5f), 0f);
+
+            if (Mathf.Abs(wheelRotation) > 0)
+            {
+                // Apply rotation to the wheels
+                m_leftWheel.localRotation = Quaternion.Euler(0f, wheelRotation, 0f);
+                m_rightWheel.localRotation = Quaternion.Euler(0f, wheelRotation, 0f);
+                m_leftBackWheel.localRotation = Quaternion.Euler(0f, Mathf.Clamp(wheelRotation, -2.5f, 2.5f), 0f);
+                m_rightBackWheel.localRotation = Quaternion.Euler(0f, Mathf.Clamp(wheelRotation, -2.5f, 2.5f), 0f);
+            }
+
 
             // Calculate turn angle based on input
             float turn = m_TurnInputValue * m_TurnSpeed * Time.fixedDeltaTime;
