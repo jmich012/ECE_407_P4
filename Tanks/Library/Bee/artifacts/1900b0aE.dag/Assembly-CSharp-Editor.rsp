@@ -381,10 +381,6 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Editor/MoveSceneViewCamera.cs"
-"Assets/Forst/Conifers [BOTD]/Installer/Editor/ConifersInstaller.cs"
-"Assets/Forst/CTI Runtime Components/CTI Runtime Components BIRP/Scripts/Editor/CTI_AdvancedEdgeFluttering.cs"
-"Assets/Forst/CTI Runtime Components/CTI Runtime Components BIRP/Scripts/Editor/CTI_DetailsEnum.cs"
-"Assets/Forst/CTI Runtime Components/CTI Runtime Components BIRP/Scripts/Editor/CTI_ShaderGUI.cs"
 "Assets/PostProcessing/Editor/Attributes/PostProcessingModelEditorAttribute.cs"
 "Assets/PostProcessing/Editor/Models/AmbientOcclusionModelEditor.cs"
 "Assets/PostProcessing/Editor/Models/AntialiasingModelEditor.cs"
@@ -420,6 +416,10 @@
 "Assets/PostProcessing/Editor/Utils/FxStyles.cs"
 "Assets/PostProcessing/Editor/Utils/ReflectionUtils.cs"
 "Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs"
+"Assets/UpdatedGame/Models/Forst/Conifers [BOTD]/Installer/Editor/ConifersInstaller.cs"
+"Assets/UpdatedGame/Models/Forst/CTI Runtime Components/CTI Runtime Components BIRP/Scripts/Editor/CTI_AdvancedEdgeFluttering.cs"
+"Assets/UpdatedGame/Models/Forst/CTI Runtime Components/CTI Runtime Components BIRP/Scripts/Editor/CTI_DetailsEnum.cs"
+"Assets/UpdatedGame/Models/Forst/CTI Runtime Components/CTI Runtime Components BIRP/Scripts/Editor/CTI_ShaderGUI.cs"
 -langversion:9.0
 
 
