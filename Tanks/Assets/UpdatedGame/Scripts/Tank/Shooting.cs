@@ -44,7 +44,14 @@ public class Shooting : MonoBehaviour
             // check if space is continously held down.
             else if (Input.GetKey(KeyCode.Space) && !m_launched)
             {
-                m_currentLaunchForce += 0.1f;
+                if (m_currentLaunchForce >= maxLaunchForce)
+                {
+                    m_currentLaunchForce = maxLaunchForce;
+                }
+                else
+                {
+                    m_currentLaunchForce += 0.01f;
+                }
                 DrawProjectileArc();
             }
             else if (Input.GetKeyUp(KeyCode.Space) && !m_launched) 
