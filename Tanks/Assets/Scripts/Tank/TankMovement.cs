@@ -173,7 +173,6 @@ namespace Complete
         {
             Move();
             Turn();
- 
         }
 
         /** 
@@ -184,12 +183,21 @@ namespace Complete
             // Calculate distance traveled by the tank in this frame
             float distance = m_MovementInputValue * m_Speed * Time.fixedDeltaTime;
 
-            RotateWheels(0f,0f);
-
-
             // Move the tank
             Vector3 movement = transform.forward * distance;
             m_Rigidbody.MovePosition(m_Rigidbody.position + movement);
+
+            // Calculate the rotational speed of each wheel based on its radius an current tank velocity
+            float frontWheelRotateValue = (m_MovementInputValue * m_Speed / 0.085652f) * Time.fixedDeltaTime;
+            float RearWheelRotateValue = (m_MovementInputValue * m_Speed / 0.122949f) * Time.fixedDeltaTime;
+
+            Vector3 frontWheelRotation = new Vector3(frontWheelRotateValue, 0f, 0f);
+            Vector3 RearWheelRotation = new Vector3(RearWheelRotateValue, 0f, 0f);
+
+            m_leftWheel.Rotate(frontWheelRotation);
+            m_rightWheel.Rotate(frontWheelRotation);
+            m_leftBackWheel.Rotate(RearWheelRotation);
+            m_rightBackWheel.Rotate(RearWheelRotation);
         }
 
 
@@ -198,44 +206,34 @@ namespace Complete
          */
         private void Turn()
         {
-            float wheelRotation = m_TurnInputValue * m_maxWheelAngle;
-            wheelRotation = Mathf.Clamp(wheelRotation, -m_maxWheelAngle, m_maxWheelAngle);
-
-            float backWheelRotation = Mathf.Clamp(wheelRotation, -2.5f, 2.5f);
-
-            RotateWheels(wheelRotation,backWheelRotation);
-
             // Calculate turn angle based on input
-            float turn = m_TurnInputValue * m_TurnSpeed * Time.fixedDeltaTime;
-            Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
+            float targetWheelRotation = m_TurnInputValue * m_maxWheelAngle - 0.05f;
 
-            // Rotate the tank body
-            if (Mathf.Abs(m_MovementInputValue) > 0.0)
+            // Smoothly rotate the wheels towards the target angle if there is input
+            if (Mathf.Abs(m_TurnInputValue) > 0.0f)
             {
-                m_Rigidbody.MoveRotation(m_Rigidbody.rotation * turnRotation);
+                Quaternion targetRotation = Quaternion.Euler(0f, targetWheelRotation, 0f);
+
+                // Apply the smoothed rotation to both left and right wheels
+                m_leftWheel.localRotation = Quaternion.RotateTowards(m_leftWheel.localRotation, targetRotation, m_TurnSpeed * Time.fixedDeltaTime);
+                m_rightWheel.localRotation = Quaternion.RotateTowards(m_rightWheel.localRotation, targetRotation, m_TurnSpeed * Time.fixedDeltaTime);
+
+                // Calculate turn angle for back wheels
+                float targetBackWheelRotation = Mathf.Clamp(targetWheelRotation, -2.5f, 2.5f);
+                Quaternion targetBackRotation = Quaternion.Euler(0f, targetBackWheelRotation, 0f);
+
+                // Apply the smoothed rotation to both left and right back wheels
+                m_leftBackWheel.localRotation = Quaternion.RotateTowards(m_leftBackWheel.localRotation, targetBackRotation, m_TurnSpeed * Time.fixedDeltaTime);
+                m_rightBackWheel.localRotation = Quaternion.RotateTowards(m_rightBackWheel.localRotation, targetBackRotation, m_TurnSpeed * Time.fixedDeltaTime);
             }
 
-        }
-
-        private void RotateWheels(float frontYRotation, float backYRotation) 
-        {
-            float frontWheelRotateValue = (m_MovementInputValue * m_Speed/ 0.085652f) * Time.fixedDeltaTime ;
-            float RearWheelRotateValue = (m_MovementInputValue * m_Speed / 0.122949f) * Time.fixedDeltaTime ;
-
-            Vector3 frontWheelRotation = new Vector3(frontWheelRotateValue, frontYRotation, 0f);
-            Vector3 RearWheelRotation = new Vector3(RearWheelRotateValue, backYRotation, 0f);
-
-            Debug.Log(frontWheelRotation);
-
-
-            m_leftWheel.localEulerAngles += frontWheelRotation;
-
-            // Apply rotation to the wheels
-            //m_leftWheel.Rotate(frontWheelRotation);
-            //m_rightWheel.Rotate(frontWheelRotation);
-            //m_leftBackWheel.Rotate(RearWheelRotation);
-            //m_rightBackWheel.Rotate(RearWheelRotation);
-
+            // Rotate the tank body
+            if (Mathf.Abs(m_MovementInputValue) > 0.0f)
+            {
+                float turn = m_TurnInputValue * m_TurnSpeed * Time.fixedDeltaTime / 2.0f;
+                Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
+                m_Rigidbody.MoveRotation(m_Rigidbody.rotation * turnRotation);
+            }
         }
 
     }

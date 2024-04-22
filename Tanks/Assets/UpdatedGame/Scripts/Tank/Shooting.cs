@@ -2,8 +2,6 @@
  * @file Shooting.cs
  * @brief This script handles shooting functionality for a tank in Unity.
  */
-using System.Net;
-using System.Threading;
 using UnityEngine;
 
 public class Shooting : MonoBehaviour
@@ -50,7 +48,7 @@ public class Shooting : MonoBehaviour
                 }
                 else
                 {
-                    m_currentLaunchForce += 0.01f;
+                    m_currentLaunchForce += 0.1f;
                 }
                 DrawProjectileArc();
             }
@@ -92,7 +90,7 @@ public class Shooting : MonoBehaviour
         // Apply the calculated force to the tank shell Rigidbody
         m_shellInstance.velocity = force * firingLocation.forward;
     }
-    private void DrawProjectileArc() 
+    private void DrawProjectileArc()
     {
         m_lineRenderer.enabled = true;
         m_lineRenderer.positionCount = Mathf.CeilToInt(m_linePoints / m_timeBetweenPoints) + 1;
@@ -102,13 +100,34 @@ public class Shooting : MonoBehaviour
 
         int i = 0;
         m_lineRenderer.SetPosition(i, startPos);
+
+        bool hasCollided = false; // Flag to track collision
+
         for (float time = 0; time < m_linePoints; time += m_timeBetweenPoints)
         {
             i++;
             Vector3 point = startPos + time * startVelocity;
             point.y = startPos.y + startVelocity.y * time + (Physics.gravity.y * time * time) / 2f;
 
+            // Check for collision using a raycast
+            RaycastHit hit;
+            if (Physics.Raycast(startPos, point - startPos, out hit, (point - startPos).magnitude))
+            {
+                // If hit something, stop drawing arc
+                hasCollided = true;
+                point = hit.point;
+                break;
+            }
+
             m_lineRenderer.SetPosition(i, point);
         }
+
+        // If no collision, continue drawing the arc until its end
+        if (!hasCollided)
+        {
+            Vector3 endPoint = startPos + m_linePoints * m_timeBetweenPoints * startVelocity;
+            m_lineRenderer.SetPosition(i, endPoint);
+        }
     }
+
 }
