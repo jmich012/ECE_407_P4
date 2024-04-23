@@ -79,6 +79,7 @@
     <Compile Include="Assets\_Completed-Assets\Scripts\Managers\TankManager.cs" />
     <Compile Include="Assets\UpdatedGame\Scripts\Tank\Shooting.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
+    <Compile Include="Assets\UpdatedGame\Scripts\Enemy\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Tank\TankMovement.cs" />
     <Compile Include="Assets\UpdatedGame\Scripts\Camera\ThirdPersonCamera.cs" />
     <Compile Include="Assets\Scripts\Shell\Shell.cs" />
@@ -107,7 +108,6 @@
     <Compile Include="Assets\PostProcessing\Runtime\Components\FxaaComponent.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
     <Compile Include="Assets\UpdatedGame\Models\Grass And Flowers Pack 1\Example Scene\SimpleTextureDrawing.cs" />
-    <Compile Include="Assets\Scripts\EnemyAttack.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\TaaComponent.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Tank\TankShooting.cs" />
     <Compile Include="Assets\Scripts\Tank\TankHealth.cs" />
@@ -120,14 +120,17 @@
     <Compile Include="Assets\_Completed-Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Tank\TankShooting.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
+    <Compile Include="Assets\UpdatedGame\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingContext.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\GrainModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\UI\UIDirectionControl.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\UpdatedGame\Scripts\Tank\Health.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\AmbientOcclusionComponent.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\BuiltinDebugViewsModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\BloomComponent.cs" />
+    <Compile Include="Assets\UpdatedGame\Scripts\Manager.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\DepthOfFieldModel.cs" />
   </ItemGroup>
   <ItemGroup>
