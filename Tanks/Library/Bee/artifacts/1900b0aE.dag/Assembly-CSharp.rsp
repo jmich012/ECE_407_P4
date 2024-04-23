@@ -412,6 +412,7 @@
 "Assets/PostProcessing/Runtime/Utils/MaterialFactory.cs"
 "Assets/PostProcessing/Runtime/Utils/RenderTextureFactory.cs"
 "Assets/Scripts/Camera/CameraControl.cs"
+"Assets/Scripts/EnemyAttack.cs"
 "Assets/Scripts/Managers/GameManager.cs"
 "Assets/Scripts/Managers/TankManager.cs"
 "Assets/Scripts/Shell/Shell.cs"

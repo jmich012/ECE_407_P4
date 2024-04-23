@@ -22,6 +22,8 @@ namespace Complete
          */
         public int m_PlayerNumber = 1;
 
+        public bool m_IsEnemy = false;
+
         /** 
          * @brief How fast the tank moves forward and back.
          */
@@ -63,7 +65,7 @@ namespace Complete
          */
         public Transform m_leftWheel;
         public Transform m_leftBackWheel;
-
+        
 
 
 
@@ -135,10 +137,17 @@ namespace Complete
          */
         private void Update()
         {
-            m_MovementInputValue = Input.GetAxis(m_MovementAxisName);
-            m_TurnInputValue = Input.GetAxis(m_TurnAxisName);
+            if (!m_IsEnemy)
+            {
+                m_MovementInputValue = Input.GetAxis(m_MovementAxisName);
+                m_TurnInputValue = Input.GetAxis(m_TurnAxisName);
 
-            EngineAudio();
+                EngineAudio();
+            }
+            else 
+            {
+                EnemyMovement();
+            }
         }
 
         /** 
@@ -234,6 +243,13 @@ namespace Complete
                 Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
                 m_Rigidbody.MoveRotation(m_Rigidbody.rotation * turnRotation);
             }
+        }
+
+        private void EnemyMovement()
+        {
+        
+        
+
         }
 
     }

@@ -77,6 +77,7 @@
     <Compile Include="Assets\PostProcessing\Editor\Models\DepthOfFieldModelEditor.cs" />
     <Compile Include="Assets\UpdatedGame\Models\Forst\CTI Runtime Components\CTI Runtime Components BIRP\Scripts\Editor\CTI_DetailsEnum.cs" />
     <Compile Include="Assets\PostProcessing\Editor\PropertyDrawers\GetSetDrawer.cs" />
+    <Compile Include="Assets\Editor\FOVEditior.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Utils\EditorGUIHelper.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Models\UserLutModelEditor.cs" />
     <Compile Include="Assets\UpdatedGame\Models\Forst\Conifers [BOTD]\Installer\Editor\ConifersInstaller.cs" />

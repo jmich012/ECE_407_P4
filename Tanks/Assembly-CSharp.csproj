@@ -107,6 +107,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Components\FxaaComponent.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
     <Compile Include="Assets\UpdatedGame\Models\Grass And Flowers Pack 1\Example Scene\SimpleTextureDrawing.cs" />
+    <Compile Include="Assets\Scripts\EnemyAttack.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\TaaComponent.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Tank\TankShooting.cs" />
     <Compile Include="Assets\Scripts\Tank\TankHealth.cs" />
