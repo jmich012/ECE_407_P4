@@ -1,37 +1,72 @@
+using UnityEngine;
+
 /** 
  * @file Shooting.cs
  * @brief This script handles shooting functionality for a tank in Unity.
  */
-using UnityEngine;
-
 public class Shooting : MonoBehaviour
 {
+    /**
+     * @brief The prefab of the tank shell to be fired.
+     */
     public Rigidbody tankShell;
+
+    /**
+     * @brief The position where the tank shell is fired from.
+     */
     public Transform firingLocation;
+
+    /**
+     * @brief The line renderer component for drawing projectile trajectory.
+     */
     public LineRenderer m_lineRenderer;
-    public float reloadTime = 1.5f;
-    public float launchForce = 1.0f;
-    public float maxLaunchForce = 30.0f;
-    public float minLaunchForce = 2.0f;
-    [SerializeField]
-    [Range(10, 100)]
-    private int m_linePoints = 25;
+
+    /**
+     * @brief The time between each point on the projectile trajectory line.
+     */
     [SerializeField]
     [Range(0.01f, 0.25f)]
     private float m_timeBetweenPoints = 0.1f;
+
+    /**
+     * @brief The number of points to draw on the projectile trajectory line.
+     */
+    [SerializeField]
+    [Range(10, 100)]
+    private int m_linePoints = 25;
+
+    /**
+     * @brief The time it takes to reload after firing.
+     */
+    public float reloadTime = 1.5f;
+
+    /**
+     * @brief The initial force applied to the tank shell when fired.
+     */
+    public float launchForce = 1.0f;
+
+    /**
+     * @brief The maximum force that can be applied to the tank shell.
+     */
+    public float maxLaunchForce = 30.0f;
+
+    /**
+     * @brief The minimum force that can be applied to the tank shell.
+     */
+    public float minLaunchForce = 2.0f;
 
     private bool m_canFire = true;
     private bool m_launched;
     private float m_timer = 0f;
     private float m_currentLaunchForce = 0.0f;
-    private Rigidbody m_shellInstance; 
-    
+    private Rigidbody m_shellInstance;
 
-
-
+    /**
+     * @brief Updates the shooting behavior based on user input.
+     */
     private void Update()
     {
-        if (m_canFire) 
+        if (m_canFire)
         {
             // check if space has been pressed once
             if (Input.GetKeyDown(KeyCode.Space))
@@ -39,7 +74,7 @@ public class Shooting : MonoBehaviour
                 m_launched = false;
                 m_currentLaunchForce = minLaunchForce;
             }
-            // check if space is continously held down.
+            // check if space is continuously held down.
             else if (Input.GetKey(KeyCode.Space) && !m_launched)
             {
                 if (m_currentLaunchForce >= maxLaunchForce)
@@ -52,13 +87,13 @@ public class Shooting : MonoBehaviour
                 }
                 DrawProjectileArc();
             }
-            else if (Input.GetKeyUp(KeyCode.Space) && !m_launched) 
+            else if (Input.GetKeyUp(KeyCode.Space) && !m_launched)
             {
                 Fire();
                 m_canFire = false;
             }
         }
-        else 
+        else
         {
             m_lineRenderer.enabled = false;
         }
@@ -90,6 +125,10 @@ public class Shooting : MonoBehaviour
         // Apply the calculated force to the tank shell Rigidbody
         m_shellInstance.velocity = force * firingLocation.forward;
     }
+
+    /**
+     * @brief Draws the projectile trajectory arc using a line renderer.
+     */
     private void DrawProjectileArc()
     {
         m_lineRenderer.enabled = true;
@@ -129,5 +168,4 @@ public class Shooting : MonoBehaviour
             m_lineRenderer.SetPosition(i, endPoint);
         }
     }
-
 }
